@@ -12,10 +12,12 @@
 /*
 font-family: 'Open Sans', sans-serif;
 font-family: 'Solway', serif;
+font-family: 'Coming Soon', cursive;
 */
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,11 +29,12 @@ body {
     background-image: url('./img/principal.png');
     background-size: cover;
     background-position: center center;
-    color: var(--second-color);
+    color: var(--first-color);
 }
 
 .alt-bg {
     background-color: var(--second-color);
+    color: var(--first-color);
 }
 
 
@@ -51,7 +54,11 @@ h1 {
 }
   
 h2 {
-    font-size: 5.5rem;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: var(--first-color);
 }
   
 h3 {
@@ -70,6 +77,13 @@ h6 {
     font-size: 3.5rem;
 }
 
+p {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-family: 'Coming Soon', cursive;
+    font-weight: bolder;
+}
+
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
@@ -84,6 +98,7 @@ h6 {
 .menu {
     width: 100%;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -118,7 +133,7 @@ h6 {
 
 .menu ul li a {
     display: block;
-    padding: 1.3rem;
+    padding: 1.4rem;
     font-size: 1.8rem;
     color: var(--first-color);
     position: relative;
@@ -140,9 +155,43 @@ h6 {
     left: 25%;
 }
 
-cite {
-    color: #1a1a1a;
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 3rem;
+.intro-text-content h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    color: var(--first-color);
+    font-family: 'Coming Soon', cursive;
+}
+
+.intro-content {
+    position: relative;
+    top: -6.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 3rem;
+    height: 100vh;
+}
+
+.intro-text-content, .first-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center ;
+}
+
+.first-img img {
+    width: 65rem;
+    height: 50rem;
+    max-height: auto;
+    max-width: auto;
+    margin-top: 8rem;
+}
+
+.pixel-content {
+    max-width: 80rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }

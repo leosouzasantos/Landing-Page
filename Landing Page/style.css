@@ -37,7 +37,6 @@ body {
     color: var(--first-color);
 }
 
-
 a {
     text-decoration: none;
     color: var(--first-color);
@@ -194,4 +193,11 @@ p {
     justify-content: center;
     height: 100vh;
     text-align: center;
+}
+
+.second-img img {
+    border-radius:2rem ;
+    top: 225%;
+    left: 6%;
+    position:absolute;
 }

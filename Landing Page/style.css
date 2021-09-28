@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 img {
@@ -262,3 +263,58 @@ p {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
 
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex:1 1 auto;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    border-radius: 3rem;
+}
+
+.full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--second-color);
+    background:  var(--second-color);
+    color: #0A1128;
+    padding: 1.5rem 2rem;
+    border-radius: 10rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--first-color);
+    color: var(--second-color);
+}

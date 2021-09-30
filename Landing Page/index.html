@@ -21,14 +21,17 @@
     />
   </head>
   <body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <aside class="menu alt-bg">
       <section class="main-content menu-content">
-        <h1>
+        <h1 onclick="getElementById('close-menu').checked = false;">
           <a href="#">PixelArt</a>
         </h1>
 
         <nav>
-          <ul>
+          <ul onclick="getElementById('close-menu').checked = false;">
             <li><a href="#Intro">Intro</a></li>
             <li><a href="#Pixel">Pixel</a></li>
             <li><a href="#grid-one">Artistas</a></li>
@@ -38,6 +41,8 @@
         </nav>
       </section>
     </aside>
+
+    <div class="menu-spacing"></div>
 
     <section id="Intro" class="intro main-bg section">
       <div class="main-content intro-content">
@@ -223,6 +228,8 @@
     </section>
   <footer class="footer alt-bg">
     <p><a href="https://github.com/leosouzasantos" target="_blank" rel="nofollow">Criado e feito por Leonardo Souza</a></p>
-  </footer>  
+  </footer>
+  
+  <a class="back-to-top" href="#">➤</a>
   </body>
 </html>

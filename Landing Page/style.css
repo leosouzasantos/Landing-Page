@@ -112,6 +112,10 @@ p {
 }
 
 
+.menu-spacing {
+    height: 65px;
+}
+
 .menu-content {
     display: flex;
     justify-content: space-between;
@@ -333,6 +337,26 @@ p {
     padding: 0.5rem;
 }
 
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--second-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--first-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--first-color);
+}
+
 @media (max-width: 800px) {
     .intro-content, .grid {
         grid-template-columns: 1fr;
@@ -350,5 +374,58 @@ p {
 
     .grid-one-content {
         display: block;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+        display: none;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+    
+    .close-menu {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        top: 2rem;
+        right: 2rem ;
+        background: var(--first-color);
+        color: var(--second-color);
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
     }
 }
